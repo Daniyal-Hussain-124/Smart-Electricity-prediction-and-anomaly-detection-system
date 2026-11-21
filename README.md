@@ -1,5 +1,13 @@
 # Smart Electricity Demand & Anomaly Detection System
 
+## Group Members
+
+| Name | Roll Number |
+|---|---|
+| Muzammil Ahmed | CT-24307 |
+| Habib-ul-Rehman | CT-24080 |
+| Daniyal Hussain | CT-24093 |
+
 ## Overview
 
 A household energy assistant that does two things from smart-meter data:
