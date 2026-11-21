@@ -1,0 +1,27 @@
+{
+  "anomaly": {
+    "model": "IsolationForest",
+    "accuracy": 0.9922,
+    "precision": 0.4966,
+    "recall": 0.7157,
+    "f1_score": 0.5863,
+    "confusion_matrix": [
+      [
+        39328,
+        222
+      ],
+      [
+        87,
+        219
+      ]
+    ],
+    "note": "Evaluation metrics computed on the test partition using statistical z-score outliers (|z| > 3) as ground truth reference."
+  },
+  "forecast": {
+    "model": "XGBoostRegressor",
+    "mse": 0.059,
+    "mae": 0.153,
+    "r2_score": 0.9393,
+    "note": "Metrics evaluated on a test subset of 15-minute aggregated power readings."
+  }
+}
