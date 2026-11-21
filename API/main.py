@@ -305,3 +305,15 @@ def anomaly_metrics():
 def forecast_metrics():
     saved = saved_metrics("forecast")
     return ForecastMetricsOutput(**saved) if saved else compute_forecast_metrics()
+
+@app.get("/debug")
+def debug():
+    info = {"models_dir": str(MODELS), "exists": MODELS.exists(),
+            "models_files": sorted(p.name for p in MODELS.iterdir()) if MODELS.exists() else [],
+            "api_files": sorted(p.name for p in HERE.iterdir())}
+    try:
+        state["forecaster"]
+        info["load"] = "ok"
+    except Exception as e:
+        info["load"] = f"{type(e).__name__}: {e}"
+    return info
