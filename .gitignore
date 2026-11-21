@@ -1,0 +1,34 @@
+# Python virtual environments (no leading slash, so this also matches backend/venv/)
+venv/
+.venv/
+env/
+sga_env/
+
+# Python cache and test files
+__pycache__/
+*.py[cod]
+.pytest_cache/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Node / React (Vite)
+node_modules/
+dist/
+.vite/
+npm-debug.log*
+
+# Secrets and local settings
+.env
+.env.*
+!.env.example
+
+# Editor / OS files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Large data files (GitHub rejects files over 100 MB)
+Data/raw/
+*.csv

@@ -1,0 +1,9 @@
+fastapi>=0.110
+uvicorn>=0.29
+pandas
+numpy
+joblib
+pyarrow
+# keep these two equal to the versions the models were trained with (tested with the versions below)
+scikit-learn==1.9.1
+xgboost==3.4.1
